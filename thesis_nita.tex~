@@ -1,0 +1,256 @@
+
+
+
+\documentclass[english,a4paper,babel,12pt]{nitathesis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx,times,epsfig,amsmath}
+\usepackage[Sonny]{myfancy}
+\usepackage{float}
+\usepackage{xspace}
+\usepackage{algorithmwh}
+\usepackage{comment}
+\usepackage{watermark}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{fancyhdr}
+\usepackage{blindtext}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lhead{}
+\chead{}
+\rhead{CSED,NIT Agartala}
+\lfoot{ }
+\cfoot{\thepage}
+\rfoot{}
+%\setlength{\headrulewidth}{0.4pt}
+%\setlength{\footrulewidth}{0.4pt}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.5pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\usepackage{algorithms}% \Add{} and \Del{} Corrections and \Mark{}
+\begin{document}
+
+% Using the watermark package which is in StyleFiles/
+% and to remove DRAFT COPY ONLY appearing on the top of all pages comment out below line
+\watermark{SAMPLE COPY ONLY}
+
+
+
+
+
+\beforepreface
+\prefacesection{Acknowledgment}
+
+I would like to take this opportunity to express my deep sense of gratitude to all who helped me directly or indirectly
+ during this thesis work.\\
+
+Firstly, I would like to thank my supervisor, \textbf{Prof. Supervisor Name}, for being a great mentor and the best adviser 
+I could ever have. Her advise, encouragement and critics are source of innovative ideas, inspiration and causes behind the successful
+completion of this dissertation. The confidence shown on me  by her was the biggest source of inspiration 
+for me. It has been a privilege working with her from last one year.\\
+
+I am highly obliged to all the faculty members of Computer Science and Engineering Department for their support and encouragement. 
+I also thank our Director \textbf{Prof.~Probir~Kr.~Bose} and H.O.D, CSED \textbf {Prof. HOD Name }
+for providing excellent computing and other facilities without which this work could not achieve its quality goal.
+\\
+ 
+I would like to express my sincere appreciation and gratitude towards 
+\textbf{Prof.~Anupam~Jamatia \& Prof.~Mrinal~Kanti~Debbarma } for their 
+support to prepare the thesis report in \LaTeX.\\
+
+ Finally, I am grateful to my \textbf{parents} for their support. It was impossible for me to complete 
+this thesis work without their love, blessing  and
+encouragement.
+\\
+
+\vspace*{0.5cm} \hspace*{11cm}\textbf{\large - Prveen Kumar}
+ 
+
+\begin{comment}
+ 
+
+
+
+
+\prefacesection{Biographical Sketch}
+
+\begin{center}
+{\textbf{\LARGE Prveen Kumar}}\end{center} \hrule
+\begin{center}
+412, Madhya Banamalipur  PIN-799001,  E-Mail: prveen.mnnit@gmail.com,  Contact. No. 09452987917 \\
+ \end{center}
+
+\subsection*{\textbf{Education}} 
+\begin{itemize}
+\item Pursuing M.Tech. in Computer Sc. \& Engg. branch from N.I.T,Agartala with CPI of 8.34/10/00.
+\item B.Tech. in Information Technology branch from B.B.D.N.I.T.M. Lucknow with 70.82\% in 2008.
+\item Intermediate from S.S.D.Inter College, Hasanpur with 66.2\% in 2002.
+\item High School from Saraswati Vidya Mandir, Hasanpur with 71.00 \% in 2000.
+\end{itemize}
+
+\subsection*{\textbf{M.Tech Thesis Research Orientation}} 
+IEEE LTSA framework has been able to genrate interest for implementation of e-Learning technology meant for two-tier or three tier.
+ Such e-Learning framework lacks security aspect making it insufficient for web educational services through Service Oriented Architecture (SOA). Implementation of different security services at different
+layers requires a pragmatic mapping from client-server architecture to distributed system architecture and finally to Service Oriented Architecture.
+
+\subsection*{Publications}
+\begin{enumerate}
+ \item  Kumar, Prveen., Samaddar, Shefalika Ghosh., Samaddar, Arun B. \& Misra, Arun K., (2010); \textbf{Extending IEEE LTSA e­learning Framework in Secured SOA Environment}, 
+  The 2nd IEEE International Conference on Education Technology and Computer (ICETC 2010), IEEE Education Society (ISBN: 978-1-4244-6368-8), Shanghai China, June 22-­24, 2010. 
+\textbf{(Accepted)}
+\item   Kumar, Prveen., Samaddar, Shefalika Ghosh., Samaddar, Arun B. \& Misra, Arun K.,(2010);\textbf{Extending IEEE LTSA e­learning Framework in Secured SOA Environment}, 
+  IEEE Transaction on Leatning Technology. \textbf{(Under Peer Review)}
+
+\end{enumerate}
+\end{comment}
+
+
+\prefacesection{Dedicated to}
+
+\begin{center}
+\vspace*{4cm}
+\textit{ \textbf {To My Loving Family for their kind love \& support.\\
+To my thesis supervisor Prof. Supervisor Name for sharing her valuable knowledge,
+ encouragement \& showing confidence on me all the time.
+}} \end{center}
+
+\newpage
+\vspace*{6cm}
+\textit{\textbf { \begin{large} \ding{125}You can't teach people everything they need to know. 
+The best you can do is position them where they can find what they need 
+to know when they need to know it.\ding{126}\end{large}}}\\
+\vspace*{4cm} \hspace*{6.5cm} \textbf{-Seymour Papert (MIT Mathematician)} 
+
+\prefacesection{Abstract}
+
+\Blindtext    %Producing 'blind' text for testing.
+
+
+
+
+\afterpreface
+\pagenumbering{roman}                     
+\setcounter{page}{15}
+\listoffigures
+%\pagenumbering{roman}
+%\setcounter{page}{11}
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}   
+
+
+\pagestyle{fancy}
+
+\flushbottom
+\include{chapter1}
+\flushbottom
+
+\flushbottom
+\include{chapter2}
+\flushbottom
+
+\flushbottom
+\include{chapter3}
+\flushbottom
+
+\flushbottom
+\include{chapter4}
+\flushbottom
+
+\flushbottom
+\include{chapter5}
+\flushbottom
+
+\flushbottom
+\include{chapter6}
+\flushbottom
+
+
+
+
+
+
+\begin{thebibliography}{8}
+
+\bibitem{cc}
+S. Samaddar.
+\newblock Development of Metadata Model of Web Learning Using Semantic Web.
+\newblock In {\em 4th International iPED Conference, iPED}, pages 77--79, 2009.
+
+\bibitem{lan}
+H. Lan, S. Ling-ge, Z. Chun-guang.
+\newblock Research on the Sharing E-Learning Based on SOA and Semantic Web Architecture.
+\newblock In {\em International Conference on Computer Science and Software Engineering}, volume: 6 pages 426--429, 2008.
+
+\bibitem{com}
+D. Berardi.
+\newblock Automatic Service Composition. Models, Techniques and Tools.
+\newblock In {\em PhD thesis}, Universit`a di Roma “La Sapienza”, 2005.
+
+\bibitem{car}
+R. Cardenas, E. Sanchez.
+\newblock Security Challenges of Distributed e-Learning Systems.
+\newblock In {\em Springer-Verlag, Berlin Heidelberg ISSU LNCS 3563}, pages 538--544, 2005.
+
+\bibitem{com2}
+T. Bultan, X. Fu, R. Hull, and J. Su.
+\newblock Conversation Specification: A New Approach to Design and Analysis of E-Service Composition.
+\newblock {\em In Proceedings of the 12th International World Wide Web Conference (WWW 2003)}, pages 403--410. ACM, 2003.
+
+
+\bibitem{ltsa}
+F. Farance, J. Tonkel.
+\newblock Draft Standard for Learning Technologies. Learning Technology Systems Architecture (LTSA). 
+\newblock In {\em Technical report, IEEE LTSC (2001)}, $http://ltsc.ieee.org/wg1/files/ltsa_05.pdf. Accessed on,  February 10$.
+
+
+\bibitem{fox}
+A.FOX AND S.D.GRIBBLE.
+\newblock Security on the move: Indirect authentication using Kerberos.
+\newblock In {\em In Proceedings of the 2nd Annual International Conference on Mobile Computing and Networking ACM, New York}, pages  155--163., November 1996.
+
+
+
+
+\bibitem{flexi} FlexiLearn. $http://www.ignouflexilearn.com. Last Accessed on, February 6 2010$. 
+
+
+
+
+
+\bibitem{support} Microsoft Support 
+\newblock {\em http://support.microsoft.com/kb/939689.} 
+\newblock Last accessed on april 20 2010.
+
+\bibitem{uddi} UDDI Specification: 
+\newblock{\em http://www.uddi.org.}
+\newblock Last accessed on january 23, 2010.
+
+\bibitem{service} 
+\newblock{\em http://seekda.com.}
+\newblock Last accessed on January 25 2010.
+
+\end{thebibliography}
+
+
+\appendix
+\chapter{Publications Related to Thesis Work}
+\begin{enumerate}	
+ \item  Kumar, Prveen., Samaddar, Shefalika Ghosh., Samaddar, Arun B. \& Misra, Arun K.,
+ (2010); \textbf{Extending IEEE LTSA e­learning Framework in Secured SOA Environment}, 
+  The 2nd IEEE International Conference on Education Technology and Computer (ICETC 2010),
+ IEEE Education Society (ISBN: 978-1-4244-6368-8), Shanghai China, June 22-­24, 2010. 
+\textbf{(Accepted)}
+\item   Kumar, Prveen., Samaddar, Shefalika Ghosh., Samaddar, Arun B. \& Misra,
+ Arun K.(2010); \textbf{Extending IEEE LTSA e­learning Framework in Secured SOA Environment}, 
+  IEEE Transaction on Leatning Technology. \textbf{(Under Peer Review)}
+
+\end{enumerate}
+\end{document}

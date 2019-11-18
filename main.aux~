@@ -1,0 +1,35 @@
+\relax 
+\select@language{USenglish}
+\@writefile{toc}{\select@language{USenglish}}
+\@writefile{lof}{\select@language{USenglish}}
+\@writefile{lot}{\select@language{USenglish}}
+\@writefile{toc}{\contentsline {chapter}{Acknowledgment}{iv}}
+\@writefile{toc}{\contentsline {chapter}{Dedicated to}{vi}}
+\select@language{english}
+\@writefile{toc}{\select@language{english}}
+\@writefile{lof}{\select@language{english}}
+\@writefile{lot}{\select@language{english}}
+\@writefile{toc}{\contentsline {chapter}{Abstract}{viii}}
+\citation{ltsa}
+\@input{chapter1.aux}
+\@input{chapter2.aux}
+\@input{chapter3.aux}
+\@input{chapter4.aux}
+\@input{chapter5.aux}
+\@input{chapter6.aux}
+\bibcite{cc}{{1}{}{{}}{{}}}
+\bibcite{lan}{{2}{}{{}}{{}}}
+\bibcite{com}{{3}{}{{}}{{}}}
+\bibcite{car}{{4}{}{{}}{{}}}
+\bibcite{com2}{{5}{}{{}}{{}}}
+\bibcite{ltsa}{{6}{}{{}}{{}}}
+\bibcite{fox}{{7}{}{{}}{{}}}
+\bibcite{flexi}{{8}{}{{}}{{}}}
+\bibcite{support}{{9}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {chapter}{References}{46}}
+\bibcite{uddi}{{10}{}{{}}{{}}}
+\bibcite{service}{{11}{}{{}}{{}}}
+\global\NAT@numberstrue
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Publications Related to Thesis Work}{48}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}

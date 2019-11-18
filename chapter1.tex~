@@ -1,0 +1,31 @@
+
+\chapter{Introduction}
+ 
+   \blindtext
+
+\section{Motivation}
+This work is totally motivated by the requirement of the ``Devlopment of Educational Content and Associated Dipository of Web service
+for Intellectual Propert Rights'' of DIT, Govt. of India. the project is being worked out at the Departmrnt of Computer Science and Engineering
+ MNNIT Allahabad. The process of devlopment the Software Framework was guided by the requirements (both functional and nonfunction) of the 
+project. The dessertation provides a sense of fullfillment in the sense that necessity and sufficiency of the framework is tested validly through
+other case study. 
+\section{Goal}
+The goal of this thesis is to attain a secured web service based e-Learning system with the help of IEEE LTSA. As IEEE LTSA is
+Client-Server based model, my goal was to make a model which would be suitable for  SOA environment and then implementing e-Learning 
+web services  on this proposed model. Extending IEEE LTSA model through step by step procedure from client-server
+ architecture to Distributed System Architecture and then to SOA is a travel towards future.
+The derived framework is implemented through a learning System which would be utilizing web services so that e-Learning system becomes 
+reuseable and at the same time remains flexible.   
+\section{Contribution of the Dessertation}
+e-Learning is the very dynamic field which is always in a sate of flux . I found 
+IEEE LTSA framework suitable for e-Learning functionalities, but was limited to client server based two-tier architecture. However there 
+is a scope to extend this model into suitable environment of demand. IEEE LTSA framework is suitably extended into distributed, and then into SOA environment by 
+keeping all the constraint in mind, and finally the farmework is validated with the help of a case study of Indira Gandhi National
+Open University's flexilearn system (IGNOU).\par
+Implementation of four services \textit{Registration Servicce, Computer Programming
+Service and Online Exam Service} using ASP.NET is offered as the proof of concept and local UDDI is configured for publishing the services. UDDI is reference center for all services. A user can accesss services and their detail from UDDI. After getting the
+necessary infromation user can use these service in his/her application. Addresses from local UDDI for each service are available. The web services are utilized with the help of ASP.NET. Web services composition is shown by the add reference service and 
+the changes made in session state variables for the purpose.   
+  
+
+ 

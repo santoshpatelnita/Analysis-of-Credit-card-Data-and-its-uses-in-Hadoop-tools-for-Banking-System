@@ -1,0 +1,70 @@
+\chapter{Mapping of IEEE LTSA Framework in Service Oriented Architecture (SOA) for further Improvement}
+Though the components have been providing a reliable way to maintain and reuse
+various functionalities, they still have an element of complexity in developing and
+maintaining component. This is more visible in case of complex functional features
+to be built for e-Learning services. The major problem with the component-based
+approach is that they have to be deployed along with the solution for exceptions.
+Coupled with these, the challenges of varying platforms and protocols have made
+components nearly impossible to be reused. Service Oriented Architecture (SOA)
+functionality reuse supersedes code reuse, as each functional component becomes a
+service. The system requesting for the service is unaware of the physical location
+of the service and hence does not have to check for the deployment status, as was
+the case with the components \cite{lan}.
+\begin{figure}[h!]
+ \centering
+ \includegraphics[scale=.5]{s0ajournal.jpeg}
+ % s0ajournal.jpeg: 892x577 pixel, 72dpi, 31.47x20.36 cm, bb=0 0 892 577
+ \caption{IEEE LTSA in SOA environment}
+\end{figure}
+
+   Instead of building an e-Learning system from scratch, it may be assembled by
+choosing the required functionality from web services related to e-Learning. Web
+services eliminate interoperability issues between component running on hardware
+and software platforms. The web services include assessment, course management,
+grade marking, meta-data management, registration and reporting web services
+outcomes. These web services are highly in demand as the fuctionality for each of
+web services are able to operate on the common standards. SOAP (Simple Object
+Access Protocol), Web Service Description Language (WSDL), Universal Description Discovery and integration (UDDI) are equally applicable in case of SOA based
+e-Learning Web services. The functions of an application or system (including
+legacy systems) can be easier to access as web service in SOA by integrating applications and systems together.\\
+
+   The proposed extended model of IEEE LTSA makes use of SOA architecture
+(Figure. 5). All the e-Learning services are registered (published) to the registry (UDDI).
+When learner require service from provider he/she has to search the service in the
+registry and needs to agree for subscribing it. A contract, according to service detail,
+is signed between the learner and the e-learning service provider. This electronic
+contract may demand the requirement of digital signature on learner’s part. Digital
+signature genration service is required to be composed with preparation of contract
+service, of course, on demand. SOAP formalizes the exchange of information written
+in XML, and WSDL describes the SOAP details in an XML vocabulary. All other
+parameters of web service remain same.
+\section{Capabilities of the proposed Service Oriented Architecture based IEEE LTSA Model}
+The analysis of the model as presented in Figure. 5 brings out the following inherent
+capabilities in the proposed extended model of IEEE LTSA:
+\begin{itemize}
+ \item \textit{Reusability}- SOA based IEEE LTSA model provide reuseability of learning services because they are loosly coupled. A new composition of different services
+is possible by permutation, combination of the services and feasibility of their composition.
+\item \textit{Interoperability}- SOA based model stresses interoperability, the ability of
+systems using different platforms and languages to communicate with each other.
+Each learning service provides an interface that can be invoked through a connector
+type. An interoperable connector consists of a protocol and a data format, that
+each of the potential user of the service understands. Interoperability is achieved
+by supporting the protocol and data formats of the service’s current and potential
+users including learners.
+\item \textit{Loose Coupling}- Coupling refers to the number of dependencies between
+modules. There are two types of coupling: loose and tight. Loosely coupled modules have a few well-known dependencies. Tightly coupled modules have many well
+known as well as unknown dependencies. Every software architecture strives to
+achieve loose coupling between modules. SOA promotes loose coupling between
+service consumers and service providers. A few well-known dependencies between
+consumers and providers may even be restored to become independent under imposed conditions. This may promote the composed components
+ or modules to perform efficiently without infection of other components and modules. The conditional loose coupling allows to run 
+the composed service faster in a stand alone
+manner.
+\item \textit{Flexibility}-The loosely-coupled, document-based, asynchronous nature of
+services in an SOA allows e-learning applications to be flexible. With changing
+requirements, the adaptability comes faster.
+\item \textit{Capability of providing composite e-learning services}- The proposed framework is having the capability like scaling, 
+suitability of high performance, customerization and coupling/decoupling of services depending upon the circumstances.
+
+\end{itemize}
+

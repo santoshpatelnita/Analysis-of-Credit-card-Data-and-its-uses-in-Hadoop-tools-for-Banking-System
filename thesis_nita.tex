@@ -1,0 +1,212 @@
+
+
+
+\documentclass[english,a4paper,babel,12pt]{nitathesis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx,times,epsfig,amsmath}
+\usepackage[Sonny]{myfancy}
+\usepackage{float}
+\usepackage{xspace}
+\usepackage{algorithmwh}
+\usepackage{comment}
+\usepackage{watermark}
+\usepackage{graphicx}{\scriptsize {\footnotesize }}
+\usepackage{pifont}
+\usepackage{fancyhdr}
+\usepackage{blindtext}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lhead{}
+\chead{}
+\rhead{CSED,NIT Agartala}
+\lfoot{ }
+\cfoot{\thepage}
+\rfoot{}
+%\setlength{\headrulewidth}{0.4pt}
+%\setlength{\footrulewidth}{0.4pt}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.5pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\usepackage{algorithms}% \Add{} and \Del{} Corrections and \Mark{}
+\begin{document}
+
+% Using the watermark package which is in StyleFiles/
+% and to remove DRAFT COPY ONLY appearing on the top of all pages comment out below line
+%\watermark{SAMPLE COPY ONLY}
+
+
+
+
+
+
+\beforepreface
+
+
+\prefacesection{Acknowledgement}
+I would like to take this opportunity to express my deep sense of gratitude to all who helped me directly or indirectly during this thesis work.
+ I would like to thank my supervisor, \textbf{Ass. Prof. Mrs. Smita Das}, for being a great mentor and the best adviser, I could ever have. Her advise, encouragement and critics are source of innovative ideas, inspiration and causes behind the successful completion of this dissertation. The confidence shown on me  by her was the biggest source of inspiration 
+for me. It has been a privilege working with her from last one year.\
+
+I am highly obliged to all the faculty members of Computer Science and Engineering Department for their support and encouragement. 
+I also thank our Director \textbf{Prof.(Dr.)~ H. K. Sharma} and H.O.D, CSED \textbf {Prof. (Dr.)~ Debasish Bhattacharya }
+for providing excellent computing and other facilities without which this work could not achieve its quality goal.
+\
+ 
+
+ Finally, I am grateful to my \textbf{parents} for their support. It was impossible for me to complete 
+this thesis work without their love, blessing  and
+encouragement.
+\\
+
+\vspace*{0.5cm} \hspace*{11cm}\textbf{\large - Santosh Kumar}
+\setcounter{page}{6}
+ 
+
+\begin{comment}
+ 
+
+
+
+
+\prefacesection{Biographical Sketch}
+
+\begin{center}
+{\textbf{\LARGE Prveen Kumar}}\end{center} \hrule
+\begin{center}
+412, Madhya Banamalipur  PIN-799001,  E-Mail: prveen.mnnit@gmail.com,  Contact. No. 09452987917 \\
+ \end{center}
+
+\subsection*{\textbf{Education}} 
+\begin{itemize}
+\item Pursuing M.Tech. in Computer Sc. \& Engg. branch from N.I.T,Agartala with CPI of 8.34/10/00.
+\item B.Tech. in Information Technology branch from B.B.D.N.I.T.M. Lucknow with 70.82\% in 2008.
+\item Intermediate from S.S.D.Inter College, Hasanpur with 66.2\% in 2002.
+\item High School from Saraswati Vidya Mandir, Hasanpur with 71.00 \% in 2000.
+\end{itemize}
+
+\subsection*{\textbf{M.Tech Thesis Research Orientation}} 
+IEEE LTSA framework has been able to genrate interest for implementation of e-Learning technology meant for two-tier or three tier.
+ Such e-Learning framework lacks security aspect making it insufficient for web educational services through Service Oriented Architecture (SOA). Implementation of different security services at different
+layers requires a pragmatic mapping from client-server architecture to distributed system architecture and finally to Service Oriented Architecture.
+
+\subsection*{Publications}
+\begin{enumerate}
+ \item  Kumar, Prveen., Samaddar, Shefalika Ghosh., Samaddar, Arun B. \& Misra, Arun K., (2010); \textbf{Extending IEEE LTSA e­learning Framework in Secured SOA Environment}, 
+  The 2nd IEEE International Conference on Education Technology and Computer (ICETC 2010), IEEE Education Society (ISBN: 978-1-4244-6368-8), Shanghai China, June 22-­24, 2010. 
+\textbf{(Accepted)}
+\item   Kumar, Prveen., Samaddar, Shefalika Ghosh., Samaddar, Arun B. \& Misra, Arun K.,(2010);\textbf{Extending IEEE LTSA e­learning Framework in Secured SOA Environment}, 
+  IEEE Transaction on Leatning Technology. \textbf{(Under Peer Review)}
+
+\end{enumerate}
+\end{comment}
+
+
+\prefacesection{Dedicated to}
+
+\begin{center}
+\vspace*{4cm}
+\textit{ \textbf {To My Loving Family for their kind love \& support.\\
+To my thesis supervisor Ass. Prof.~ Mrs. Smita Das for sharing her valuable knowledge,
+ encouragement \& showing confidence on me all the time.
+}} \end{center}
+
+\newpage
+\vspace*{6cm}
+\textit{\textbf { \begin{large} \ding{125}You can't teach people everything they need to know. 
+The best you can do is position them where they can find what they need 
+to know when they need to know it.\ding{126}\end{large}}}\\
+\vspace*{4cm} \hspace*{6.5cm} \textbf{-Seymour Paper (MIT Mathematician)} 
+
+\prefacesection{Abstract}
+The Banking System forms the core of the Financial Sector of any economy. The role of Commercial Banks is more relevant in developing economies.The future reform process need to be designed so that it should focus on ensuring sustained viability and efficiency of the Banking System. A leading banking  and credit card services provider \textbf {CORPORATION BANK} is trying to use Hadoop technologies to handle and analyze large amounts of data.
+Currently, the organization has data in RDBMS but want to use the Hadoop ecosystem for storage, archival, and analysis of large amount of
+data.
+   %Producing 'blind' text for testing.
+
+
+
+
+\afterpreface
+\pagenumbering{roman}                     
+\setcounter{page}{15}
+%\listoffigures
+%\pagenumbering{roman}
+%\setcounter{page}{11}
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}   
+
+
+\pagestyle{fancy}
+
+\flushbottom
+\include{chapter1}
+\flushbottom
+
+\flushbottom
+\include{chapter2}
+\flushbottom
+
+\flushbottom
+\include{chapter3}
+\flushbottom
+
+\flushbottom
+\include{chapter4}
+\flushbottom
+
+\flushbottom
+\include{chapter5}
+\flushbottom
+
+\flushbottom
+\include{chapter6}
+\flushbottom
+
+
+
+
+
+
+\begin{thebibliography}{8}
+
+\bibitem{cc}
+Introduction to Big Data Analytics:A Webinar by Wizlq Education. 
+\bibitem{lan}
+Big Data analytics using Hadoop: A Lecture by Durga Software Solution.
+\bibitem{com}
+Book Followed:\newline
+Information technology for management by Efraim Turban,Linda Volonino.\newline
+Data Analytics Made Accessible, by A. Maheshwari.
+
+\bibitem{car}
+Website Followed:https://www.flysas.com
+\bibitem{com2}
+https://www.smartdatacollective.com
+
+
+\end{thebibliography}
+
+
+\appendix
+\chapter{Biographical Sketch}
+\begin{center}
+\textbf{\large Santosh Kumar}\par
+At-Devdan, P.O-Chhardhi, Ps-Kalwari,Dist-Basti, State-Uttar Pradesh, Pin-272301\\
+ Email-santoshpatel.nita@gmail.com, Contact No.-9565925350 
+\end{center}
+\begin{enumerate}
+  % \item[$cdot$ bla1] item 1
+  \item[$\bullet$] Pursuing MCA, From National Institute of Technology, Agartala with CGPA of 7.01/10.
+	\item[$\bullet$]B.Sc from K.S.Saket P.G. college Ayodhya Faizabad, Uttar Pradesh with 63.33 \% in 2015.
+	\item[$\bullet$]Intermediate from B.P.R.K.I.C Khoria Bazar Basti, Uttar Pradesh with 60.00 \% in 2012.
+	\item[$\bullet$]10\textsuperscript(th) from Raghuraj Ram Tiwari HSS Gaighat Basti, Uttar Pradesh with 55.00 \% in 2010.
+\end{enumerate}
+\end{document}

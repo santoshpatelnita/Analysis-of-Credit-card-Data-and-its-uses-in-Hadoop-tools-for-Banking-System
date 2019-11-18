@@ -1,0 +1,41 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+N.I.T. Agartala Thesis Format
+LaTeX Style file for the  N.I.T. Agartala Thesis Format by Anupam Jamatia, 2007/06/20, updated 30/03/2012 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+---------
+Contents
+---------
+
+nitathesis.cls - the main class file for NIT,Agartala thesis format (version 0.1beta, updated Mar 30 2012). 
+
+README - A file describing the usage of nitathesis.cls
+
+nita_logo.png - official NIT Agartala logo
+
+thesis_nita.tex - example file putting everything together
+
+algorithmwh.sty - The algorithms package for LaTeX aims to produce high-quality descriptions of algorithms using pseudo-code
+
+fancyhdr.sty - Creating headers and footers in Latex can be done by using the package “fancyhdr”.
+
+myfancy.sty
+
+natbib.sty - The natbib package defines a number of very useful citation commands which replace the usual \cite. These are really necessary in any author-year citation system, where you don't always cite a reference using the same format for the citation. These commands and their output are illustrated below. The most frequently used are \citet (textual cite) and \citep (parenthetical cite). \cite is equivalent to \citet, but this shouldn't be used because it is often defined by other style files.
+
+watermark.sty - In order to have a watermark sentence (e.g. "SAMPLE COPY ONLY"), use the draftcopy package, with the additional parameters
+
+chapter1.tex to chapter6.tex - are the Chapters of the Thesis.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-------
+Usage
+-------
+
+To use nitathesis.cls first time, Get/download all the files of .tex, .cls ,.sty and .png/.jpg extension in the directory where you want to write your thesis.
+Modify thesis_nita.tex and nitathesis.cls as per your need. chapter1.tex to chapter6.tex - are the Chapters of the Thesis. So as per your need modify the contents.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+

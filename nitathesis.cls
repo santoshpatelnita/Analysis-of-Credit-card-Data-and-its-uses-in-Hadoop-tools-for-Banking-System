@@ -1,0 +1,439 @@
+% NITA style for B.Tech, M.Tech and Ph.D Thesis Project Report
+% -- morphed from the stanford style with numerous localizations!
+
+
+%----------------------------- identification ---------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{nita}[2012/08/01 v1.0 NITA B.Tech , M. Tech, MCA , PhD  thesis report]
+%----------------------------- initial code -----------------------------------
+
+%--------------------------- declaration of options ---------------------------
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
+%--------------------------- execution of options -----------------------------
+\ProcessOptions
+%--------------------------- package loading ----------------------------------
+\LoadClass[12pt,a4paper]{report}
+%-------------------------------- main code -----------------------------------
+\renewcommand{\bibname}{References}
+
+
+
+\RequirePackage{amssymb}
+%\RequirePackage{graphics}
+%\RequirePackage{graphicx}
+\RequirePackage{fancyhdr}
+%\RequirePackage{eucal}
+\RequirePackage[USenglish]{babel}
+%\RequirePackage[usenames, dvipsnames]{color}
+%\RequirePackage[perpage]{footmisc}
+\RequirePackage[square, sort, numbers, authoryear]{natbib}
+%\RequirePackage{ifthen}
+
+\long\def\comment#1{}
+\comment{
+\usepackage[ pdftex,
+            pdfpagelayout = None, %useoutlines,
+            %bookmarks,
+            %bookmarksopen = true,
+            pdfstartview = FitH, %other options: Fit, FitB
+            bookmarksnumbered = true,
+            breaklinks = true,
+            linktocpage,
+            backref,
+            colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue,
+            hyperindex = false,
+            hyperfigures,
+            a4paper,
+            pdfpagemode = None,
+            pdfauthor = {Anupamjamatia},
+            pdftitle = {Sample \ for \ PG \ Thesis},
+            ]{hyperref}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page layout
+%--------------
+
+% We need 1" margins except on the binding edge, where it is 1 1/2"
+% Theses are single-sided, so we don't care about \evensidemargin
+\oddsidemargin 0.46cm \evensidemargin 0.46cm % + 1inch= 3cm
+\marginparwidth 40pt \marginparsep 10pt
+\topmargin 0pt \headsep 30pt
+\textheight 22.5cm \textwidth 16cm
+%\footheight 0cm
+%\headheight 0cm
+
+
+% Disallow page breaks at hyphens (this will give some underfull vbox's,
+% so an alternative is to use \brokenpenalty=100 and manually search
+% for and fix such page breaks)
+\brokenpenalty=10000
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Use 1.3 times the normal baseline-to-baseline skip
+\renewcommand{\baselinestretch}{1.3}
+
+% Figures and tables are to be numbered sequentially throughout the
+% thesis, rather than within chapters; for style consistency, do
+% equations the same.  The following \def of \cl@chapter is a kludge:
+% really there should be a \removefromreset, to stop figure numbers,
+% etc., from being reset at chapter beginnings
+
+\def\cl@chapter{\@elt{section}\@elt{footnote}}
+\def\thefigure{\@arabic\c@figure}
+\def\thetable{\@arabic\c@table}
+\def\theequation{\arabic{equation}}
+
+% Redefine the macro used for floats (including figures and tables)
+% so that single spacing is used. (Note \def\figure{\@float{figure}set
+% single spacing} doesn't work because figure has an optional
+% argument)
+\def\@xfloat#1[#2]{\ifhmode \@bsphack\@floatpenalty -\@Mii\else
+   \@floatpenalty-\@Miii\fi\def\@captype{#1}\ifinner
+\@parmoderr\@floatpenalty\z@
+\else\@next\@currbox\@freelist{\@tempcnta\csname ftype@#1\endcsname
+\multiply\@tempcnta\@xxxii\advance\@tempcnta\sixt@@n \@tfor \@tempa
+:=#2\do {\if\@tempa h\advance\@tempcnta \@ne\fi \if\@tempa
+t\advance\@tempcnta \tw@\fi \if\@tempa b\advance\@tempcnta
+4\relax\fi \if\@tempa p\advance\@tempcnta 8\relax\fi
+}\global\count\@currbox\@tempcnta}\@fltovf\fi
+\global\setbox\@currbox\vbox\bgroup
+\def\baselinestretch{1}\@normalsize \boxmaxdepth\z@
+\hsize\columnwidth \@parboxrestore}
+
+% Redefine the macro used for footnotes to use single spacing
+\long\def\@footnotetext#1{\insert\footins{\def\baselinestretch{1}\footnotesize
+    \interlinepenalty\interfootnotelinepenalty 
+    \splittopskip\footnotesep
+    \splitmaxdepth \dp\strutbox \floatingpenalty \@MM
+    \hsize\columnwidth \@parboxrestore
+   \edef\@currentlabel{\csname p@footnote\endcsname\@thefnmark}\@makefntext
+    {\rule{\z@}{\footnotesep}\ignorespaces
+      #1\strut}}}
+
+% \author, \title are defined in report; here are the rest of the
+% front matter defining macros
+
+
+\def\dept#1{\gdef\@dept{#1}}
+\def\supervisor#1{\gdef\@supervisor{#1}}
+\def\hod#1{\gdef\@hod{#1}}
+\def\externalexaminer#1{\gdef\@externalexaminer{#1}}
+\def\degree#1{\mox{\gdef\@degree{#1}}}
+\def\submitdate#1{\gdef\@submitdate{#1}}
+\def\copyrightyear#1{\gdef\@copyrightyear{#1}} % \author, \title in report
+\def\specialization#1{\mbox{\gdef\@specialization{#1}}}
+\def\@title{Analysis of Credit Card Data and Its uses in Hadoop for Banking System}
+\def\@author{Santosh Kumar}
+\def\@RegNo{16MCA006} % Like 11PCS001
+\def\@dept{Computer Science and Engineering}
+\def\@supervisor{Assistant Professor. Mrs.Smita Das}
+\def\@hod{Prof. Dr. Rup Narayan Ray}
+\def\@externalexaminer{Signature with Seal}
+\def\@degree{Master of Computer Application}
+  \def\@specialization{Computer Science \& Engineering}
+\def\@college{~National Institute of Technology, Agartala}
+\def\@submitdate{\ifcase\the\month\or
+  January\or February\or March\or April\or May\or June\or
+  July\or August\or September\or October\or November\or December\fi,
+  \space \number\the\year}
+
+%\ifnum\month=12
+%    \@tempcnta=\year \advance\@tempcnta by 1
+%    \edef\@copyrightyear{\number\the\@tempcnta}
+%\else
+    \def\@copyrightyear{\number\the\year}
+%\fi
+%
+\newif\ifcopyright \newif\iffigurespage \newif\iftablespage
+\copyrightfalse
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\coverp{%
+    \thispagestyle{empty}%
+    \renewcommand{\baselinestretch}{1}
+    \null%
+    \begin{center}
+        \textbf{{\LARGE \uppercase \expandafter{\@maintitle}}}
+    \end{center}
+  \vskip 3cm 
+  
+  \begin{center}
+    \begin{figure} [htb]
+    \begin{center}
+    \includegraphics[scale=1.0]{nita_logo.png}
+    \end{center}
+    \end{figure}
+  \end{center}
+  \vskip 6cm   
+    \begin{center}
+%        \sl by\\
+        %by\\
+        \textbf{\textit{\@author}}\\
+    	%\@RegNo
+    \end{center}
+    
+    \begin{center}
+%        {\sl to the}\\
+        
+        {\bf \expandafter{COMPUTER SCIENCE \& ENGINEERING DEPARTMENT}}\\
+        { \bf {NATIONAL INSTITUTE OF TECHNOLOGY,AGARTALA\\INDIA-799046}}\\
+        \bf {\@submitdatewc}
+    \end{center}
+
+    \vskip 1cm
+\newpage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\titlep{%
+    \thispagestyle{empty}%
+    \renewcommand{\baselinestretch}{1}
+    \null%
+    \begin{center}
+        \textbf{{\Large\expandafter{\@title}}}
+    \end{center}
+  
+    \begin{center}
+%        {\sl A Thesis Submitted}\\
+        {A Report Submitted}\\
+        in Partial Fulfillment of the Requirements\\
+        for the Degree of\\
+        \textbf{\@degree}
+       
+    \end{center}
+    \begin{center}
+%  
+        by\\
+        \textbf{\@author}\\
+    	\@RegNo
+    \end{center}
+    \vskip .5cm 
+
+
+\begin{center}
+%        \sl by\\
+        Under the Guidance of\\
+        \textbf{Mrs. Smita Das}\\
+	Assistant Professor, CSE Department\\
+	and\\
+	\textbf{Mr. Mrinmai Sharma}\\
+	Sr. Project Manager, Arbre Creations Pvt. Ltd.
+	%Associate Professor, CSE Department
+    
+    \end{center}
+    \vskip 0.5cm 
+
+\begin{figure} [htb]
+
+    \begin{center}
+
+    \includegraphics[scale=0.71]{nita_logo.png}
+
+    \end{center}
+
+\end{figure}
+    \begin{center}
+%        {\sl to the}\\
+        
+        {\bf \uppercase\expandafter{COMPUTER SCIENCE AND ENGINEERING DEPARTMENT}}\\
+        { NATIONAL INSTITUTE OF TECHNOLOGY \\ AGARTALA -- 799046, INDIA}\\
+        \bf\@submitdate
+    \end{center}
+
+    \vskip 1cm
+\newpage}
+
+\def\copyrightpage{%
+    \null\vfill
+    \begin{center}
+        \Large\copyright\ Copyright \@copyrightyear\\
+        by\\
+        \@author\\
+    \end{center}
+    \vfill\newpage}
+
+\def\undertakingpage{\newpage%
+    \renewcommand{\baselinestretch}{1.3}
+    \vspace*{\fill}
+    \centerline{\LARGE\bf UNDERTAKING}
+    \vspace{3cm}
+    \begin{center}
+    \begin{minipage}{5.5in}
+    \parindent=0pt
+    I declare that the work presented in this report titled
+    ``{\sl\@title}'', submitted to the \mbox{\@dept} Department, \@college, for 
+    the award of the {\bf\emph \@degree} \ degree in \mbox{\bf\emph \@specialization}, 
+    is my original work. I have not plagiarized or submitted the same work for 
+    the award of any other degree. In case this undertaking is found incorrect, I accept 
+    that my degree may be unconditionally withdrawn.\par
+    \vspace*{2cm}
+    \@submitdate\\Agartala\par
+    \hbox to 4.5in {
+    \hfill\vbox{\hsize 2in\vrule width 2in height0.4pt\vspace*{-4mm}\par\center{(\@author)}}}
+
+
+    \vspace*{5cm}
+    \end{minipage}
+    \end{center}
+    \setcounter{page}{3}
+}
+
+
+%55555555555555555555555555555
+
+%\long\def\signaturepreabmle{%
+%\parindent=0pt
+%Certified   that  the   work   contained   in   the  report titled
+%``{\sl\@title}'', by {\sl\@author}, Registration Number {\sl\@RegNo} has been carried out under 
+% my supervision and that this work has not been submitted  elsewhere for a degree.
+%\par
+%\vspace{3cm}}
+
+%\long\def\signature#1{%
+%\parbox{0.47\textwidth}{\hrulefill\par#1}
+%}
+
+%\def\signaturepage{%
+%    \renewcommand{\baselinestretch}{1.3}
+
+%\vspace*{\fill}
+%    \centerline{\LARGE\bf CERTIFICATE}
+%    \vspace{2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\signaturepreabmle
+%    \signature{
+%        \centerline{(\@supervisor)}\par
+%	\centerline{(Report Supervisor)}\par
+%        \centerline{Assistant Professor}\par
+%        \centerline{\@dept \ Dept.}\par
+%        \centerline{N.I.T, Agartala}}\hfill
+%    \signature{
+%	\centerline{(\@hod)}\par
+%	\centerline{(Head of the Department)}\par
+%	\centerline{Associate Professor}\par
+ %       \centerline{\@dept \ Dept.}\par
+  %      \centerline{N.I.T, Agartala}}\par
+   % \vspace{4cm}
+   % \null\hfill 
+   % \signature{
+%	\centerline{\@externalexaminer}\par
+%	\centerline{(External Examiner)}\par
+        %\@dept \ Dept.\par
+        % abcd University
+	%}\hfill
+  %  \vspace*{\fill}
+%}
+
+
+%5555555555555555555555555555
+
+\def\beforepreface{
+    \pagenumbering{roman}
+    \pagestyle{plain}
+    \titlep
+    \ifcopyright\copyrightpage\fi
+    \undertakingpage}
+   % \signaturepage}
+
+\def\prefacesection#1{%
+    \chapter*{#1}
+    \addcontentsline{toc}{chapter}{#1}}
+
+
+% The \addvspace business below is to avoid the extra space that gets put
+% in the tables of figures and tables between chapters (it makes no sense
+% now that the numbering is continuous)
+\def\afterpreface{\newpage
+    \tableofcontents
+    \newpage
+    \iftablespage
+        {\addvspace{10pt}
+        \let\saveaddvspace=\addvspace
+        \def\addvspace##1{}
+
+        \listoftables
+        \let\addvspace=\saveaddvspace}
+        \newpage
+    \fi
+    \iffigurespage
+        {\addvspace{10pt}
+        \let\saveaddvspace=\addvspace
+        \def\addvspace##1{}
+
+        \listoffigures
+        \let\addvspace=\saveaddvspace}
+        \newpage
+    \fi
+    \pagenumbering{arabic}
+    \pagestyle{plain}
+}
+
+\setcounter{secnumdepth}{3}
+
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}{-3.25ex plus  -1ex minus -.2ex}{1.5ex plus .2ex}{\large\sl}}
+\def\thesubsubsection{\hbox{\vrule height 1ex width .75ex depth .3ex}}
+
+%
+%
+% Some Theorem Environments
+%
+%
+
+
+\newtheorem{condition}{Condition}
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{defn}{Definition}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{subproblem}{Subproblem}[chapter]
+
+
+\newenvironment{definition}{\begin{defn}\em}{\end{defn}}
+\newenvironment{proof}{\noindent{\bf Proof:}\hspace  {5mm}}{
+\nopagebreak\nobreak\quad\nopagebreak\nobreak\proofbox\medskip}
+\newenvironment{example}{\noindent{\bf Example}\quad}{
+\nopagebreak\nobreak\quad\nobreak\nopagebreak\proofbox\smallskip}
+
+\newcounter{case}
+\newenvironment{case}{\begin{list}{\bf Case \arabic{case}:}%
+{\usecounter{case}%
+\labelwidth 5em
+\leftmargin 5em
+\setlength\listparindent{\parindent}
+\makelabel}
+\def\case{\item }}{\end{list}\nobreak\nopagebreak\quad\nopagebreak\nobreak\proofbox\bigskip}
+\def\proofbox{\hbox{\vrule height1.2ex depth.3ex width0.8ex}}
+
+
+% Get References instead of Bibliography
+\def\thebibliography#1{\chapter*{References\@mkboth
+% {BIBLIOGRAPHY}{BIBLIOGRAPHY}}
+ {References}{References}}
+ \addcontentsline{toc}{chapter}{References}%\bf
+ \list
+ {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
+ \advance\leftmargin\labelsep
+ \usecounter{enumi}}
+ \def\newblock{\hskip .11em plus .33em minus .07em}
+ \sloppy\clubpenalty4000\widowpenalty4000
+ \sfcode`\.=1000\relax}
+\let\endthebibliography=\endlist
+
+
+
+
+% --> Remove dots in TOC [24/10/2001] Thanks to the tocloft documentation! [10/11/2001]
+% \renewcommand{\@dotsep}{10000}
+
